@@ -1,0 +1,17 @@
+- name: Demo eda-aap
+  sources:
+    - ansible.eda.webhook:
+        port: 5000
+  rules:
+    - name: Recover service
+      condition: event.payload.status == "down"
+      actions:
+        - run_job_template:
+            organization: Default
+            name: demo-fake-restart
+            job_args:
+              extra_vars:
+                status: "down"
+
+        - debug:
+            msg: "System is down"
