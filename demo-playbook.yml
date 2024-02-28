@@ -5,5 +5,5 @@
     
     - name: print success
       ansible.builtin.debug:
-        msg: "Service is {{ state }}. Restarted successfully."
+        msg: "Service is {{ status }}. Restarted successfully."
         

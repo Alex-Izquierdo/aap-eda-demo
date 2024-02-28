@@ -15,4 +15,4 @@
                 status: "down"
 
         - debug:
-            msg: "System is down"
+            msg: "System is down, recovery initiated."
