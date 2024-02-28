@@ -1,4 +1,5 @@
 - name: Demo eda-aap
+  hosts: all
   sources:
     - ansible.eda.webhook:
         port: 5000
